@@ -19,8 +19,7 @@ export class App extends Component {
     );
     if (searchName) {
       alert(`${contact.name}  is already in contacts`);
-    }
-    this.setState(ps => ({ contacts: [...ps.contacts, contact] })); // adding a new contact
+    } else if (this.setState(ps => ({ contacts: [...ps.contacts, contact] }))); // adding a new contact
   };
 
   handleChangeFilter = ({ target: { value } }) => {
